@@ -19,6 +19,7 @@ client.once("ready", () => {
 
 const MESSAGE_RESPONSE = ["Callate perra ༼ つ ◕_◕ ༽つ", " Huevos🥚🥚", "Que tal PUTA 💅"];
 const MESSAGE_RESPONSE2 = ["Que rico!!!", "Comes"];
+const MESSAGE_RESPONSE3 = ["Le gusta el pito", "Se la come con todo y huevos","Quiere cum"];
 
 
 //Recibir mensaje
@@ -33,6 +34,11 @@ function gotMessage(message) {
     if ( message.content.match(/([a-z])ola+/)) {
         let randomIndex = Math.floor(Math.random() * MESSAGE_RESPONSE.length);
         message.channel.send(MESSAGE_RESPONSE[randomIndex]);
+    }
+  
+  if ( message.content.match(/([a-z])laf+/)) {
+        let randomIndex = Math.floor(Math.random() * MESSAGE_RESPONSE3.length);
+        message.channel.send(MESSAGE_RESPONSE3[randomIndex]);
     }
 
 
